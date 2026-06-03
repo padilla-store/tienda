@@ -53,7 +53,6 @@ export const sanitizeUrl = (url) => {
       host === 'via.placeholder.com' ||
       host === 'placehold.co' ||
       host === 'padillastore.com' ||
-      host === 'padillastoresanmiguel.vercel.app' ||
       host.endsWith('.supabase.co') ||
       host === 'localhost' ||
       host === '127.0.0.1';
