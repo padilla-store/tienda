@@ -33,7 +33,7 @@ const LinksPage = () => {
     
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (isMobile) {
-      window.location.href = `whatsapp://send?phone=${cleanPhone}`;
+      window.location.assign(`whatsapp://send?phone=${cleanPhone}`);
     } else {
       window.open(url || `https://api.whatsapp.com/send?phone=${cleanPhone}`, '_blank');
     }
