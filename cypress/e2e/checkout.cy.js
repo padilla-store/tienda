@@ -57,7 +57,7 @@ describe('Flujo de Checkout y WhatsApp', () => {
           hero_title: "Padilla's Store",
           hero_subtitle: 'Tu destino premium para joyería y accesorios de celular en El Salvador.',
           hero_image_url: 'https://via.placeholder.com/800x400',
-          contact_email: 'detallesymas.contacto@gmail.com',
+          contact_email: 'padillastoresv@gmail.com',
           contact_phone: '+50373117312',
           social_facebook: null,
           social_instagram: null,

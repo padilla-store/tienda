@@ -1,4 +1,4 @@
-# I Nova Sv
+# Padilla Store
 
 Tienda en línea de accesorios para celular en El Salvador. Encuentra los mejores cases, protectores de pantalla, cargadores, audífonos, cables, soportes y más.
 

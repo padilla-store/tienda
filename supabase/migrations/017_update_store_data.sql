@@ -24,6 +24,6 @@ INSERT INTO public.products (name, slug, description, price, old_price, category
 UPDATE public.store_settings SET
   hero_title = 'Padilla''s Store',
   hero_subtitle = 'Tu destino premium para joyería y accesorios de celular en El Salvador.',
-  contact_email = 'detallesymas.contacto@gmail.com',
+  contact_email = 'padillastoresv@gmail.com',
   contact_phone = '+50373117312',
   updated_at = now();
