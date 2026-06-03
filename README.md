@@ -1,7 +1,5 @@
 # Padilla Store 🛍️💎
 
-![Padilla Store Banner](public/og-image.png)
-
 > **Tu destino premium para joyería y accesorios de celular en El Salvador.**  
 > E-commerce PWA de alto rendimiento construido con React, Vite y Supabase.
 
