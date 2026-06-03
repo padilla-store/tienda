@@ -25,5 +25,5 @@ UPDATE public.store_settings SET
   hero_title = 'Padilla''s Store',
   hero_subtitle = 'Tu destino premium para joyería y accesorios de celular en El Salvador.',
   contact_email = 'padillastoresv@gmail.com',
-  contact_phone = '+50373117312',
+  contact_phone = '+50374866909',
   updated_at = now();
