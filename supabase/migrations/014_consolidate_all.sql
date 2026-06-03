@@ -196,7 +196,7 @@ WITH CHECK (auth.uid() = user_id);
 --    CRIT-002 FIX: Combines is_admin() + MIME validation + file size limit (5MB)
 --    from 005_harden + 013_strict into ONE canonical set.
 -- ---------------------------------------------------------------------------
-ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
+-- ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
 
 -- Public read
 DROP POLICY IF EXISTS "Public access to product images" ON storage.objects;

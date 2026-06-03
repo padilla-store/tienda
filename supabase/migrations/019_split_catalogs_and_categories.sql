@@ -45,7 +45,9 @@ INSERT INTO public.categories (name, slug, description, icon, featured, catalog)
 ON CONFLICT (slug) DO UPDATE 
 SET catalog = EXCLUDED.catalog, name = EXCLUDED.name, description = EXCLUDED.description, icon = EXCLUDED.icon;
 
--- 6. Mapear los productos de prueba existentes a las nuevas categorías más específicas
+-- 6. Añadir category_id a products y mapear los productos de prueba existentes
+ALTER TABLE public.products ADD COLUMN IF NOT EXISTS category_id uuid REFERENCES public.categories(id);
+
 UPDATE public.products 
 SET category = 'fundas-y-protectores', category_id = (SELECT id FROM public.categories WHERE slug = 'fundas-y-protectores')
 WHERE slug = 'funda-aura-case-iphone-15-pro';

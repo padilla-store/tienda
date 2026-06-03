@@ -12,6 +12,11 @@ CREATE TABLE IF NOT EXISTS public.system_logs (
     resolved boolean DEFAULT false
 );
 
+ALTER TABLE public.system_logs ADD COLUMN IF NOT EXISTS details jsonb;
+ALTER TABLE public.system_logs ADD COLUMN IF NOT EXISTS url text;
+ALTER TABLE public.system_logs ADD COLUMN IF NOT EXISTS user_agent text;
+ALTER TABLE public.system_logs ADD COLUMN IF NOT EXISTS resolved boolean DEFAULT false;
+
 -- RLS: Solo usuarios autenticados pueden insertar logs.
 -- CRIT-003: Cambiado de 'TO public' a 'TO authenticated' para prevenir DoS anónimo
 -- vía la anon_key pública expuesta en el bundle del SPA.
