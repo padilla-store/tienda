@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso bloqueado</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@300;400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8f9fa;
+      font-family: 'Roboto', 'Google Sans', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #202124;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 480px;
+      padding: 40px 24px;
+      animation: fadeIn 0.6s ease both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Google logo */
+    .google-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      margin-bottom: 32px;
+      font-family: 'Google Sans', Arial, sans-serif;
+    }
+
+    .g-b  { color: #4285f4; }
+    .g-r  { color: #ea4335; }
+    .g-y  { color: #fbbc04; }
+    .g-bl { color: #4285f4; }
+    .g-g  { color: #34a853; }
+    .g-r2 { color: #ea4335; }
+
+    /* Google-style multicolor spinner */
+    .spinner-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid #e8eaed;
+      border-top-color: #4285f4;
+      border-right-color: #ea4335;
+      border-bottom-color: #fbbc04;
+      border-left-color: #34a853;
+      border-radius: 50%;
+      animation: google-spin 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    }
+
+    @keyframes google-spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      font-size: 13px;
+      color: #9aa0a6;
+      margin-bottom: 28px;
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.35; }
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e8eaed;
+      margin: 0 0 24px 0;
+    }
+
+    .error-code {
+      font-size: 12px;
+      color: #9aa0a6;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #202124;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #5f6368;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .details {
+      font-size: 12px;
+      color: #9aa0a6;
+      line-height: 2;
+      text-align: left;
+      background: #fff;
+      border: 1px solid #e8eaed;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .details span {
+      color: #5f6368;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="google-logo">
+      <span class="g-b">G</span><span class="g-r">o</span><span class="g-y">o</span><span class="g-bl">g</span><span class="g-g">l</span><span class="g-r2">e</span>
+    </div>
+
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <p class="loading-text">Verificando seguridad del dominio...</p>
+
+    <hr class="divider" />
+
+    <p class="error-code">ERR_DOMAIN_BLOCKED &nbsp;&middot;&nbsp; Código: G-403</p>
+
+    <h1>Google ha bloqueado este dominio</h1>
+
+    <p class="subtitle">
+      Este sitio ha sido identificado como una posible amenaza para los usuarios.
+      Google Safe Browsing ha restringido el acceso a este dominio de forma preventiva.
+    </p>
+
+    <div class="details">
+      <div><span>Dominio:</span> padilla-store.github.io</div>
+      <div><span>Estado:</span> Bloqueado por política de seguridad</div>
+      <div><span>Motivo:</span> Infracción de las Directrices de Google</div>
+      <div><span>Referencia:</span> GSB-2026-08-PADILLA</div>
+    </div>
+
+  </div>
+</body>
+</html>
