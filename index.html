@@ -56,40 +56,41 @@
     .g-g  { color: #34a853; }
     .g-r2 { color: #ea4335; }
 
-    /* Google-style multicolor spinner */
-    .spinner-wrapper {
+    /* Failed icon */
+    .failed-wrapper {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
     }
 
-    .spinner {
-      width: 48px;
-      height: 48px;
-      border: 4px solid #e8eaed;
-      border-top-color: #4285f4;
-      border-right-color: #ea4335;
-      border-bottom-color: #fbbc04;
-      border-left-color: #34a853;
+    .failed-icon {
+      width: 56px;
+      height: 56px;
+      background: #fce8e6;
+      border: 2.5px solid #ea4335;
       border-radius: 50%;
-      animation: google-spin 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: failedPulse 2s ease-in-out infinite;
     }
 
-    @keyframes google-spin {
-      0%   { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .failed-icon svg {
+      width: 28px;
+      height: 28px;
     }
 
-    .loading-text {
+    @keyframes failedPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(234,67,53,0.3); }
+      50%       { box-shadow: 0 0 0 8px rgba(234,67,53,0); }
+    }
+
+    .failed-text {
       font-size: 13px;
-      color: #9aa0a6;
+      font-weight: 500;
+      color: #ea4335;
       margin-bottom: 28px;
-      animation: pulse 1.8s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.35; }
+      letter-spacing: 0.2px;
     }
 
     .divider {
@@ -144,11 +145,15 @@
       <span class="g-b">G</span><span class="g-r">o</span><span class="g-y">o</span><span class="g-bl">g</span><span class="g-g">l</span><span class="g-r2">e</span>
     </div>
 
-    <div class="spinner-wrapper">
-      <div class="spinner"></div>
+    <div class="failed-wrapper">
+      <div class="failed-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L18 18M6 18L18 6" stroke="#ea4335" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
     </div>
 
-    <p class="loading-text">Verificando seguridad del dominio...</p>
+    <p class="failed-text">Error fatal &nbsp;/&nbsp; Critical Error</p>
 
     <hr class="divider" />
 
